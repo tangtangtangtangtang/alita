@@ -1,0 +1,97 @@
+@keyframes pr1A {
+  0% {
+    transform: rotate(-180deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes pr2A {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    width: 100px;
+    height: 200px;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes circlelA {
+  0% {
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.box {
+  position: relative;
+  .content {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    flex-shrink: 0;
+    width: 180px;
+    height: 180px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 5;
+  }
+  .circlel {
+    position: absolute;
+    background: #fff;
+    flex-shrink: 0;
+    width: 100px;
+    height: 200px;
+    border-radius: 200px 0 0 200px;
+    z-index: 4;
+    animation: circlelA 5s linear forwards infinite;
+    transition-property: opacity;
+  }
+  .circler {
+    position: absolute;
+    left: 0;
+    background: #fff;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .prl {
+    position: absolute;
+    // width: 100px;
+    // height: 200px;
+    left: 100px;
+    border-radius: 0 200px 200px 0;
+    background: green;
+    flex-shrink: 0;
+    z-index: 3;
+    transform: rotate(-180deg);
+    transform-origin: 0 100px;
+    animation: pr2A 5s linear forwards infinite;
+  }
+  .prr {
+    position: absolute;
+    left: 100px;
+    background: green;
+    flex-shrink: 0;
+    width: 100px;
+    height: 200px;
+    border-radius: 0 200px 200px 0;
+    z-index: 3;
+    transform: rotate(-180deg);
+    transform-origin: 0 100px;
+    animation: pr1A 5s linear forwards infinite;
+  }
+}
